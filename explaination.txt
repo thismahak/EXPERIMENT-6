@@ -1,0 +1,272 @@
+html
+<!DOCTYPE html>
+
+- This line declares the document type as HTML5.
+
+html
+<html lang="en">
+
+- This is the opening `<html>` tag, indicating that the document is in English (`en` stands for English).
+
+html
+<head>
+
+- The `<head>` section contains metadata about the document and links to external resources.
+
+html
+    <meta charset="UTF-8">
+
+- This `<meta>` tag sets the character encoding to UTF-8, which supports a wide range of characters and symbols.
+
+html
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+- This `<meta>` tag configures the viewport settings for responsive design on various devices, ensuring that the webpage adjusts to different screen sizes.
+
+html
+    <title>User Information Form</title>
+
+- This `<title>` tag sets the title of the webpage displayed in the browser's title bar to "User Information Form."
+
+html
+    <style>
+
+- The `<style>` tag indicates the start of an inline CSS block for styling the webpage.
+
+html
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+- This block of CSS styles the `<body>` element:
+  - `font-family` sets the font for the entire page to Arial or a generic sans-serif font.
+  - `background-color` sets the background color to a light gray (#f4f4f4).
+  - `margin: 0;` and `padding: 0;` remove any default margin and padding to ensure a clean starting point for styling.
+
+html
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+- This block of CSS styles an element with the class "container":
+  - `max-width` limits the width of the container to 600 pixels.
+  - `margin` centers the container horizontally by adding 20 pixels of margin on all sides and auto for horizontal centering.
+  - `background-color` sets the background color of the container to white.
+  - `padding` adds 20 pixels of padding to the container.
+  - `border-radius` rounds the corners of the container by 5 pixels.
+  - `box-shadow` adds a subtle shadow to the container for depth and visual appeal.
+
+html
+        h2 {
+            text-align: center;
+        }
+
+- This CSS rule styles all `<h2>` elements, centering their text using `text-align`.
+
+html
+        label {
+            display: block;
+            margin-bottom: 8px;
+	    margin-top: 100px;
+        }
+
+- This CSS rule styles all `<label>` elements:
+  - `display: block;` makes labels block-level elements, ensuring they appear on separate lines.
+  - `margin-bottom: 8px;` adds 8 pixels of margin at the bottom of each label for spacing.
+
+html
+        input[type="text"],
+        input[type="email"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+- This CSS rule styles text input fields (`input[type="text"]`), email input fields (`input[type="email"]`), and select elements (`select`):
+  - `width: 100%;` makes them expand to the full width of their container.
+  - `padding: 10px;` adds 10 pixels of padding within each input field.
+  - `margin-bottom: 10px;` provides 10 pixels of margin at the bottom of each field.
+  - `border: 1px solid #ccc;` adds a 1-pixel solid border with a light gray color (#ccc).
+  - `border-radius: 5px;` rounds the corners of the input fields by 5 pixels.
+
+html
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+
+- This CSS rule styles radio buttons (`input[type="radio"]`) and adds 5 pixels of margin to the right of each radio button.
+
+html
+        .btn {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+- This CSS rule styles elements with the class "btn," which is used for styling the submit button:
+  - `background-color` sets the background color to a blue shade (#007BFF).
+  - `color` sets the text color to white (#fff).
+  - `padding` adds 10 pixels of vertical padding and 20 pixels of horizontal padding.
+  - `border: none;` removes the border from the button.
+  - `border-radius: 5px;` rounds the corners of the button by 5 pixels.
+  - `cursor: pointer;` changes the mouse cursor to a pointer when hovering over the button to indicate interactivity.
+
+html
+<body>
+
+- The opening `<body>` tag indicates the start of the webpage's content.
+
+html
+    <div class="container">
+
+- This `<div>` element with the class "container" represents the main content container of the webpage, applying the defined styling.
+
+html
+        <h2>User Information</h2>
+
+- This `<h2>` element displays the heading "User Information" in the center of the container.
+
+html
+        <form action="#" method="post">
+
+- This `<form>` element defines a form with the "post" method (which is commonly used for submitting data to a server). The "action" attribute is set to "#" (a placeholder) and will need to be replaced with the actual submission endpoint when implementing server-side processing.
+
+html
+            <label for="name">Name:</label>
+
+- This `<label>` element is associated with an input field using the "for" attribute and provides a label for the "name" input field.
+
+html
+            <input type="text" id="name" name="name" required>
+
+- This `<input>` element with "type" set to "text" represents a text input field for the user's name. It has an "id" of "name," a "name" attribute, and the "required" attribute to make it mandatory.
+
+html
+            <label for="gender">Gender:</label>
+
+- This `<label>` element is associated with radio buttons to capture the user's gender.
+
+html
+            <input type="radio" id="male" name="gender" value="male" required>
+
+- This `<input>` element with "type" set to "radio" represents a radio button for selecting the gender "Male." It has an "id," a "name" attribute (which groups radio buttons with the same name), a "value," and is marked as "required."
+
+html
+            <label for="male">Male</label>
+
+- This `<label>` element provides a label for the "Male" radio button.
+
+html
+            <input type="radio" id="female" name="gender" value="female" required>
+
+- This `<input>` element represents a radio button for selecting the gender "Female." It shares the same "name" attribute with the "Male" radio button, grouping them together. It also has a "value" and is marked as "required."
+
+html
+            <label for="female">Female</label>
+
+- This `<label>` element provides a label for the "Female" radio button.
+
+html
+            <label for="mobile">Mobile Number:</label>
+
+- This `<label>` element provides a label for the mobile number input field.
+
+html
+            <input type="text" id="mobile" name="mobile" required>
+
+- This `<input>` element with "type" set to "text" represents a text input field for the user's mobile number. It has an "id," a "name" attribute, and is marked as "required."
+
+html
+            <label for="email">Email:</label>
+
+- This `<label>` element provides a label for the email input field.
+
+html
+            <input type="email" id="email" name="email" required>
+
+- This `<input>` element with "type" set to "email" represents an email input field. It has an "id," a "name" attribute, and is marked as "required."
+
+html
+            <label for="city">City:</label>
+
+- This `<label>` element provides a label for the city input field.
+
+html
+            <input type="text" id="city" name="city" required>
+
+- This `<input>` element with "type" set to "text" represents a text input field for the user's city. It has an "id," a "name" attribute, and is marked as "required."
+
+html
+            <label for="state">State:</label>
+
+- This `<label>` element provides a label for the state input field.
+
+html
+            <input type="text" id="state" name="state" required>
+
+- This `<input>` element with "type" set to "text" represents a text input field for the user's state. It has an "id," a "name" attribute, and is marked as "required."
+
+html
+            <label for="country">Country:</label>
+
+- This `<label>` element provides a label for the country select field.
+
+html
+            <select id="country" name="country" required>
+
+- This `<select>` element creates a dropdown menu for selecting the user's country. It has an "id," a "name" attribute, and is marked as "required."
+
+html
+                <option value="USA">United States</option>
+                <option value="Canada">Canada</option>
+                <!-- Add more options as needed -->
+
+- These `<option>` elements represent individual options within the country dropdown menu. Each `<option>` has a "value" attribute (which is the value submitted when the form is submitted) and the display text for the option.
+
+html
+            </select>
+
+
+- This closing `</select>` tag ends the country dropdown menu.
+
+html
+            <input type="submit" class="btn" value="Submit">
+
+- This `<input>` element with "type" set to "submit" represents the form's submit button. It has a class of "btn" for styling, and the text "Submit" as its value.
+
+html
+        </form>
+
+
+- This closing `</form>` tag ends the user information form.
+
+html
+    </div>
+
+- This closing `</div>` tag ends the main content container.
+
+html
+</body>
+
+- This closing `</body>` tag indicates the end of the webpage's content.
+
+html
+</html>
+
+- This closing `</html>` tag marks the end of the HTML document.
